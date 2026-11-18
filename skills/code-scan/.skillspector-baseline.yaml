@@ -1,0 +1,30 @@
+# SkillSpector baseline — findings listed here are suppressed on future scans.
+# Edit 'reason' fields and add glob 'rules' as needed. See docs/SUPPRESSION.md.
+version: 2
+scanner_version: 2.12.0
+rules: []
+fingerprints:
+- hash: sha256:60969bf06c32196a65a142f2ce1b46730861ac074ca20b14fc1b8ca4ae6c45c4
+  rule_id: AST4
+  file: scripts/scan.py
+  reason: Accepted finding (auto-generated baseline)
+- hash: sha256:eea443e038cc4f499bda1a3ed04c86540268aa1d3e16f7bce406dbc1383214a4
+  rule_id: RP1
+  file: SECURITY.md
+  reason: Accepted finding (auto-generated baseline)
+- hash: sha256:69610f9fd595ae96bc933b02a37f5752390a197dc0802791b1d4098ce90153fd
+  rule_id: RP1
+  file: SECURITY.md
+  reason: Accepted finding (auto-generated baseline)
+- hash: sha256:b58c37ce83faf1276569c54668fbf025bf657e36b7d2e29a3907017a536efa8c
+  rule_id: RP1
+  file: SKILL.md
+  reason: Accepted finding (auto-generated baseline)
+- hash: sha256:f881fe1bbd0c30e52052fe010ce53534830dcaf607d7f2b437168ae70310a764
+  rule_id: RP1
+  file: scripts/scan.py
+  reason: Accepted finding (auto-generated baseline)
+- hash: sha256:0df8e1741fca4f2f2b96eb36a2547801ea7fa362142a23bc5374778a96efb601
+  rule_id: AE1
+  file: SKILL.md
+  reason: Accepted finding (auto-generated baseline)
