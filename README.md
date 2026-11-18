@@ -56,6 +56,12 @@ cp -r code-scan/skills/code-scan ~/.claude/skills/      # or ~/.codex/skills/, .
 
 The demo is a real run: `demos/code-scan.json` holds the captured output and `tools/make_demo.py` renders it.
 
+## Provenance
+
+Every command in this skill was run against a real target before it was written down: a live
+database, a staging host, a failing CI run, a browser session. The repository was created and
+published on 2026-11-18; where the workflow itself is older, `CHANGELOG.md` carries the dates.
+
 ## Security
 
 SkillSpector: **0/100, SAFE, 0 open findings** against the committed baseline; every accepted
