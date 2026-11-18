@@ -2,5 +2,9 @@
   "name": "code-scan",
   "version": "0.1.0",
   "description": "Skylos (Python) and Fallow (TS/JS) as one prioritised report, with a baseline gate.",
-  "skills": "./skills"
+  "skills": "./skills",
+  "author": {
+    "name": "Ibrahim M. Badr",
+    "url": "https://github.com/ibrahimbdr"
+  }
 }

@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Skylos (Python) and Fallow (TS/JS) as one prioritised report, with a baseline gate.",
   "author": {
-    "name": "Appit Labs",
-    "url": "https://github.com/Appit-labs"
+    "name": "Ibrahim M. Badr",
+    "url": "https://github.com/ibrahimbdr"
   },
   "homepage": "https://github.com/Appit-labs/code-scan",
   "license": "MIT",
