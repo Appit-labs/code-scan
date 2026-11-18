@@ -1,0 +1,43 @@
+{
+  "skill": "code-scan",
+  "prompt": "you@laptop:~/api",
+  "steps": [
+    {
+      "cmd": "scan.py .",
+      "phase": "scan",
+      "note": "Skylos for Python, Fallow for TS/JS \u2014 one severity scale",
+      "out": [
+        "findings: 9  (1 high \u00b7 8 low)",
+        "  [high  ] skylos SKY-L014               app.py:9  Hardcoded credential in 'API_TOKEN'. Use environment variables or a secrets manager instead.",
+        "  [low   ] skylos SKY-R101               .:1  Python project has no mypy or pyright policy configured. Add a checked type policy for public code\u2026",
+        "  [low   ] skylos SKY-R102               .:1  Python project has no Ruff policy configured.",
+        "  [low   ] skylos SKY-R103               .:1  No [tool.skylos.gate] policy is configured for repository quality gates.",
+        "  [low   ] skylos SKY-R104               .:1  Repository has no pre-commit policy file.",
+        "  [low   ] skylos unused-import          app.py:1  unused import",
+        "  [low   ] skylos unused-function        app.py:5  unused function"
+      ]
+    },
+    {
+      "cmd": "scan.py /tmp/demo3/ts",
+      "phase": "scan",
+      "note": "the same command covers the frontend",
+      "out": [
+        "findings: 2  (1 medium \u00b7 1 low)",
+        "  [medium] fallow unused-dependency      package.json:1  unused dependency: lodash",
+        "  [low   ] fallow unused-export          src/a.ts:2  unused export: neverUsed"
+      ]
+    },
+    {
+      "cmd": "scan.py . --gate",
+      "phase": "gate",
+      "note": "CI fails only on NEW high findings \u2014 a baseline makes it adoptable",
+      "out": [
+        "findings: 9  (1 high \u00b7 8 low)",
+        "  [high  ] skylos SKY-L014               app.py:9  Hardcoded credential in 'API_TOKEN'. Use environment variables or a secrets manager instea",
+        "  [low   ] skylos SKY-R101               .:1  Python project has no mypy or pyright policy configured. Add a checked type policy for pub",
+        "  [low   ] skylos SKY-R102               .:1  Python project has no Ruff policy configured.",
+        "gate FAILED: 1 new high+ finding(s)"
+      ]
+    }
+  ]
+}

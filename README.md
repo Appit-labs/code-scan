@@ -14,6 +14,10 @@
 Works in **pi · Claude Code · Codex · Cursor** and any agent that reads a `SKILL.md` — plain
 Markdown plus one stdlib script, no agent-specific tools.
 
+<p align="center">
+  <img alt="code-scan demo — real run, regenerable from demos/code-scan.json" src="skills/code-scan/assets/demo.gif" width="900">
+</p>
+
 ## What it is
 
 `code-scan` runs Skylos and Fallow, normalises both into one severity scale, and adds the thing neither has alone: a repository baseline so a gate is adoptable on day one. It reads a whole repo or only the diff, prints a PR-ready table, and can group findings into "delete" versus "needs a human".
@@ -49,6 +53,8 @@ cp -r code-scan/skills/code-scan ~/.claude/skills/      # or ~/.codex/skills/, .
 | --- | --- |
 | always-on — the description, paid every session | ~90 |
 | on invoke | ~1.4k |
+
+The demo is a real run: `demos/code-scan.json` holds the captured output and `tools/make_demo.py` renders it.
 
 ## Security
 
