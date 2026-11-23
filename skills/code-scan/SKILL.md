@@ -21,6 +21,8 @@ dependencies, duplication, complexity, architecture cycles).
 python3 "$SKILL_DIR/scripts/scan.py" <path> [--gate] [--changed[=ref]] [--json|--md] [--fix-plan]
 ```
 
+**Not for:** threat modelling, auth review or CVE triage — this reports dead code, unused dependencies, duplication, complexity and hard-coded secrets. A security audit is a different pass with a different report.
+
 ## Portability
 
 Works in any agent that can run shell commands. Commands use `$SKILL_DIR` for this skill's
